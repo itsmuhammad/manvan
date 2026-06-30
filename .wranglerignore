@@ -1,8 +1,6 @@
 # Ignore git directory
-.git
-.git/
-.git/**/*
-.github
+.git/**
+.github/**
 
 # Ignore node modules
 node_modules/
