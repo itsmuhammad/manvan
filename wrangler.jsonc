@@ -1,7 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/wrangler.json",
   "name": "manvan",
-  "type": "javascript",
   "main": "src/index.js",
   "compatibility_date": "2026-06-30",
   "observability": {
@@ -14,14 +13,7 @@
   "site": {
     "bucket": "."
   },
-  "rules": [
-    {
-      "type": "CompiledContentType",
-      "globs": ["**/*.js", "**/*.css"],
-      "fallthrough": true
-    }
-  ],
-  "compatibility_flags": [
+"compatibility_flags": [
     "nodejs_compat"
   ]
 }
