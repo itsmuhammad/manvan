@@ -1,0 +1,29 @@
+﻿2026-05-09 - Audited Google Search Console coverage for manwithvan.ae. Confirmed 40 not indexed URLs: 29 alternate canonical, 1 duplicate no canonical, 1 redirect, 6 crawled not indexed, 3 stale 404.
+2026-05-09 - Target keyword: canonical SEO cleanup. Updated .htaccess to force https://manwithvan.ae, remove www/http variants, redirect /index.html and /index.php to /, and add missing old blog-post.php slug redirects.
+2026-05-09 - Target keyword: moving service terms Abu Dhabi. Adservice canonical, commercial title, meta description and stronger H1 copy to terms.html.
+2026-05-09 - Target keyword: office movers abu dhabi. Rewrote office-movers-packers-abu-dhabi.html title/meta/H1/excerpt, expanservice cost copy, FAQ content and Article/Service/FAQ schema.
+2026-05-09 - Target keyword: moving safety tips abu dhabi. Rewrote moving safety blog title/meta/H1/excerpt, adservice Abu Dhabi safety sections, five FAQ items and FAQ schema.
+2026-05-09 - Target keyword: movers al karamah abu dhabi. Rewrote Al Karamah page title/meta/H1/intro, expanservice local signals and FAQ, and upgraservice LocalBusiness schema with geo and areaServed.
+2026-05-09 - Tightened priority meta descriptions to the 145-155 character CTR band requested for deployment QA.
+2026-05-09 - Cleaned sitemap duplicate canonical URL by replacing /blog/index.html with /blog/ and updated lastmod on modified URLs.
+2026-05-09 - [DONE] index.html, villa-movers-abu-dhabi.html, same-day-movers-abu-dhabi.html, office-movers-abu-dhabi.html — normalized LocalBusiness schema with Man With Van Abu Dhabi, AED 300 - AED 5000 price range, 07:00-21:00 hours and expanservice Abu Dhabi service areas.
+2026-05-09 - [DONE] index.html — adservice Review schema using the three testimonials already visible on the homepage; did not invent external Google review text.
+
+2026-05-10 - [DONE] house-shifting-abu-dhabi.html — created 700+ word service page targeting "house shifting abu dhabi" with canonical, LocalBusiness/Service, FAQ and Breadcrumb schema.
+2026-05-10 - [DONE] apartment-movers-abu-dhabi.html — created 700+ word service page targeting "apartment movers abu dhabi" with canonical, LocalBusiness/Service, FAQ and Breadcrumb schema.
+2026-05-10 - [DONE] piano-movers-abu-dhabi.html — created 700+ word service page targeting "piano movers abu dhabi" with canonical, LocalBusiness/Service, FAQ and Breadcrumb schema.
+2026-05-10 - [DONE] single-furniture-movers-abu-dhabi.html — created 700+ word service page targeting "single furniture movers abu dhabi" with canonical, LocalBusiness/Service, FAQ and Breadcrumb schema.
+2026-05-10 - [DONE] appliances-movers-abu-dhabi.html — created 700+ word service page targeting "appliance movers abu dhabi" with canonical, LocalBusiness/Service, FAQ and Breadcrumb schema.
+2026-05-10 - [DONE] locations/movers-al-ain.html — created 700+ word location page targeting "movers al ain" with canonical, LocalBusiness/Service, FAQ and Breadcrumb schema.
+2026-05-10 - [DONE] locations/movers-al-ruwais-abu-dhabi.html — created 700+ word location page targeting "movers al ruwais abu dhabi" with canonical, LocalBusiness/Service, FAQ and Breadcrumb schema.
+2026-05-10 - [DONE] locations/movers-mohammed-bin-zayed-city.html — created 700+ word location page targeting "movers mohammed bin zayed city" with canonical, LocalBusiness/Service, FAQ and Breadcrumb schema.
+2026-05-10 - [DONE] sitemap.xml and .htaccess — adservice new page URLs and clean URL rewrite rules for the new SEO gap pages.
+2026-05-10 - [DONE] blog/cost-of-moving-abu-dhabi.html — upgraservice Week 1 blog targeting "moving cost abu dhabi" with 800+ words, FAQ schema and Breadcrumb schema.
+2026-05-10 - [DONE] blog/office-relocation-abu-dhabi-complete-guide.html — created Week 1 blog targeting "office movers abu dhabi" with 800+ words, FAQ schema and Breadcrumb schema.
+2026-05-10 - [DONE] sitemap.xml — updated blog lastmod/new URL entries for Week 1 content.
+2026-05-10 - [DONE] blog/cost-of-moving-abu-dhabi.html — upgraservice Week 1 blog targeting "moving cost abu dhabi" with 800+ words, FAQ schema and Breadcrumb schema.
+2026-05-10 - [DONE] blog/office-relocation-abu-dhabi-complete-guide.html — created Week 1 blog targeting "office movers abu dhabi" with 800+ words, FAQ schema and Breadcrumb schema.
+2026-05-10 - [DONE] sitemap.xml — updated blog lastmod/new URL entries for Week 1 content.
+2026-05-10 - [DONE] blog/cost-of-moving-abu-dhabi.html — upgraservice Week 1 blog targeting "moving cost abu dhabi" with 800+ words, FAQ schema and Breadcrumb schema.
+2026-05-10 - [DONE] blog/office-relocation-abu-dhabi-complete-guide.html — created Week 1 blog targeting "office movers abu dhabi" with 800+ words, FAQ schema and Breadcrumb schema.
+2026-05-10 - [DONE] sitemap.xml — updated blog lastmod/new URL entries for Week 1 content.

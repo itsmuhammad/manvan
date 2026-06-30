@@ -1,0 +1,93 @@
+﻿<!-- Header Component - Glass header + Nav drawer (matches main pages) -->
+<header class="glass-header" role="banner">
+  <div class="container">
+    <a href="/index.html" class="logo">
+      <img src="/images/logo/logo.png" alt="Man With Van - Movers in Abu Dhabi" height="44" width="auto" class="logo-image">
+    </a>
+    <nav class="nav-desktop">
+      <ul>
+        <li><a href="/index.html" data-ar-label="الرئيسية">Home</a></li>
+        <li class="services-dropdown">
+          <a href="/services.html" data-ar-label="الخدمات">Services</a>
+          <ul>
+            <li><a href="/man-with-van-abu-dhabi.html" data-ar-label="ونيت نقل اثاث">Man With Van</a></li>
+            <li><a href="/villa-movers-abu-dhabi.html" data-ar-label="نقل فلل">Villa Movers</a></li>
+            <li><a href="/studio-movers-abu-dhabi.html" data-ar-label="نقل استوديو">Studio Movers</a></li>
+            <li><a href="/1-bhk-movers-abu-dhabi.html" data-ar-label="نقل شقة غرفة">1 BHK Movers</a></li>
+            <li><a href="/2-bhk-movers-abu-dhabi.html" data-ar-label="نقل شقة غرفتين">2 BHK Movers</a></li>
+            <li><a href="/3-bhk-movers-abu-dhabi.html" data-ar-label="نقل شقة 3 غرف">3 BHK Movers</a></li>
+            <li><a href="/apartment-movers-abu-dhabi.html" data-ar-label="نقل شقق">Apartment Movers</a></li>
+            <li><a href="/office-movers-abu-dhabi.html" data-ar-label="نقل مكاتب">Office Movers</a></li>
+            <li><a href="/furniture-movers-abu-dhabi.html" data-ar-label="نقل اثاث">Furniture Moving</a></li>
+            <li><a href="/packing-services-abu-dhabi.html" data-ar-label="تغليف اثاث">Packing Services</a></li>
+            <li><a href="/storage-abu-dhabi.html" data-ar-label="تخزين اثاث">Storage</a></li>
+            <li><a href="/movers-near-me-abu-dhabi.html" data-ar-label="نقل اثاث قريب مني">Movers Near Me</a></li>
+            <li><a href="/man-with-van-abu-dhabi.html" data-ar-label="ونيت للايجار">Pickup Truck Rental</a></li>
+          </ul>
+        </li>
+        <li class="services-dropdown locations-dropdown">
+          <a href="/locations/movers-khalifa-city-abu-dhabi.html" data-ar-label="المناطق">Locations</a>
+          <ul>
+            <li><a href="/locations/movers-khalifa-city-abu-dhabi.html" data-ar-label="نقل اثاث خليفة سيتي">Khalifa City</a></li>
+            <li><a href="/locations/movers-al-reem-island-abu-dhabi.html" data-ar-label="نقل اثاث جزيرة الريم">Al Reem Island</a></li>
+            <li><a href="/locations/movers-mussafah-abu-dhabi.html" data-ar-label="نقل اثاث المصفح">Mussafah</a></li>
+            <li><a href="/locations/movers-yas-island-abu-dhabi.html" data-ar-label="نقل اثاث جزيرة ياس">Yas Island</a></li>
+            <li><a href="/locations/movers-al-raha-beach-abu-dhabi.html" data-ar-label="نقل اثاث شاطئ الراحة">Al Raha Beach</a></li>
+            <li><a href="/locations/movers-saadiyat-island-abu-dhabi.html" data-ar-label="نقل اثاث السعديات">Saadiyat Island</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog.html" data-ar-label="المدونة">Blog</a></li>
+        <li><a href="/about.html" data-ar-label="من نحن">About</a></li>
+        <li><a href="/contact.html" data-ar-label="اتصل بنا">Contact</a></li>
+        <li class="language-switcher"><a href="/" data-lang-switch="en" aria-label="English version">EN</a><span aria-hidden="true"> / </span><a href="/ar/" data-lang-switch="ar" aria-label="Arabic version">AR</a></li>
+        <li><a href="tel:+971508268481" class="call-cta" data-ar-label="اتصل الآن">Call Now</a></li>
+        <li><a href="/get-free-quote.html" class="quote-cta" data-ar-label="اطلب عرض سعر">Get Free Quote</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" type="button">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+<aside class="nav-drawer" id="nav-drawer" aria-label="Mobile menu">
+  <div class="drawer-header">
+    <a href="/index.html" class="drawer-logo-link"><img src="/images/logo/logo.png" alt="Man With Van" class="drawer-logo logo-image"></a>
+    <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="/index.html" data-ar-label="الرئيسية">Home</a>
+    <button type="button" class="drawer-accordion-trigger" id="drawer-services-trigger" aria-expanded="false">
+      <span data-ar-label="الخدمات">Services</span> <i class="fa-solid fa-chevron-down drawer-accordion-icon"></i>
+    </button>
+    <div class="drawer-services" id="drawer-services">
+      <a href="/man-with-van-abu-dhabi.html" data-ar-label="ونيت نقل اثاث">Man With Van</a>
+      <a href="/villa-movers-abu-dhabi.html" data-ar-label="نقل فلل">Villa Movers</a>
+      <a href="/studio-movers-abu-dhabi.html" data-ar-label="نقل استوديو">Studio Movers</a>
+      <a href="/1-bhk-movers-abu-dhabi.html" data-ar-label="نقل شقة غرفة">1 BHK Movers</a>
+      <a href="/2-bhk-movers-abu-dhabi.html" data-ar-label="نقل شقة غرفتين">2 BHK Movers</a>
+      <a href="/3-bhk-movers-abu-dhabi.html" data-ar-label="نقل شقة 3 غرف">3 BHK Movers</a>
+      <a href="/apartment-movers-abu-dhabi.html" data-ar-label="نقل شقق">Apartment Movers</a>
+      <a href="/office-movers-abu-dhabi.html" data-ar-label="نقل مكاتب">Office Movers</a>
+      <a href="/furniture-movers-abu-dhabi.html" data-ar-label="نقل اثاث">Furniture Moving</a>
+      <a href="/packing-services-abu-dhabi.html" data-ar-label="تغليف اثاث">Packing Services</a>
+      <a href="/storage-abu-dhabi.html" data-ar-label="تخزين اثاث">Storage</a>
+      <a href="/movers-near-me-abu-dhabi.html" data-ar-label="نقل اثاث قريب مني">Movers Near Me</a>
+      <a href="/man-with-van-abu-dhabi.html" data-ar-label="ونيت للايجار">Pickup Truck Rental</a>
+    </div>
+    <a href="/locations/movers-khalifa-city-abu-dhabi.html" data-ar-label="المناطق">Locations</a>
+    <a href="/blog.html" data-ar-label="المدونة">Blog</a>
+    <a href="/about.html" data-ar-label="من نحن">About</a>
+    <a href="/contact.html" data-ar-label="اتصل بنا">Contact</a>
+    <div class="drawer-language-switcher"><a href="/" data-lang-switch="en" aria-label="English version">EN</a><span aria-hidden="true"> / </span><a href="/ar/" data-lang-switch="ar" aria-label="Arabic version">AR</a></div>
+  </nav>
+  <div class="drawer-divider"></div>
+  <div class="drawer-ctas">
+    <a href="tel:+971508268481" class="drawer-call" data-ar-label="اتصل الآن">Call Now</a>
+    <a href="/get-free-quote.html" class="drawer-quote" data-ar-label="اطلب عرض سعر">Get Free Quote</a>
+  </div>
+</aside>

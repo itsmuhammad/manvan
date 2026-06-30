@@ -1,0 +1,170 @@
+DirectoryIndex index.html
+
+# Canonical host and protocol for Googlebot: https://manwithvan.ae
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.manwithvan\.ae$ [NC]
+RewriteRule ^ https://manwithvan.ae%{REQUEST_URI} [R=301,L]
+
+# SEO consolidation redirects added 2026-06-07
+# Keep duplicate MBZ and quote URLs out of the index.
+RewriteRule ^locations/movers-mohammed-bin-zayed-city\.html$ /locations/movers-mohammed-bin-zayed-city-abu-dhabi.html [R=301,L]
+RewriteRule ^ar/locations/movers-mohammed-bin-zayed-city\.html$ /ar/locations/movers-mohammed-bin-zayed-city-abu-dhabi.html [R=301,L]
+RewriteRule ^quote\.html$ /get-free-quote.html [R=301,L]
+
+# Remove duplicate homepage URLs that appear in Search Console.
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Search Console sitemap cleanup: submit only the canonical blog index URL.
+RewriteRule ^blog/?$ /blog.html [R=301,L]
+RewriteRule ^blog/index\.html$ /blog.html [R=301,L]
+RewriteRule ^apartment-movers-abu-dhabi/?$ apartment-movers-abu-dhabi.html [L]
+RewriteRule ^house-shifting-abu-dhabi/?$ house-shifting-abu-dhabi.html [L]
+RewriteRule ^piano-movers-abu-dhabi/?$ piano-movers-abu-dhabi.html [L]
+RewriteRule ^single-furniture-movers-abu-dhabi/?$ single-furniture-movers-abu-dhabi.html [L]
+RewriteRule ^appliances-movers-abu-dhabi/?$ appliances-movers-abu-dhabi.html [L]
+RewriteRule ^locations/movers-al-ain/?$ locations/movers-al-ain.html [L]
+RewriteRule ^locations/movers-al-ruwais-abu-dhabi/?$ locations/movers-al-ruwais-abu-dhabi.html [L]
+RewriteRule ^locations/movers-mohammed-bin-zayed-city/?$ /locations/movers-mohammed-bin-zayed-city-abu-dhabi.html [R=301,L]
+RewriteRule ^ar/locations/movers-mohammed-bin-zayed-city/?$ /ar/locations/movers-mohammed-bin-zayed-city-abu-dhabi.html [R=301,L]
+</IfModule>
+
+# 301 Redirects - Old PHP URLs to new HTML
+Redirect 301 /index.php /
+Redirect 301 /services.php /services.html
+Redirect 301 /blog.php /blog.html
+Redirect 301 /about.php /about.html
+Redirect 301 /contact.php /contact.html
+Redirect 301 /quote.php /get-free-quote.html
+
+# 301 Redirects - Old page URLs (renamed/removed pages)
+Redirect 301 /terms-of-service.html /terms.html
+Redirect 301 /storage-solutions.html /services.html
+Redirect 301 /commercial-moving.html /services.html
+Redirect 301 /house-moving.html /services.html
+Redirect 301 /blog-page-2.html /blog.html
+Redirect 301 /blog-page-3.html /blog.html
+
+# 301 Redirects - Old blog posts (renamed/removed)
+Redirect 301 /blog/office-moving-checklist-abu-dhabi-business-relocation.html /blog/office-movers-packers-abu-dhabi.html
+Redirect 301 /blog/how-can-i-save-money-when-hiring-movers-abu-dhabi.html /blog/cost-of-moving-abu-dhabi.html
+Redirect 301 /blog/moving-during-ramadan-dos-donts-abu-dhabi.html /blog/moving-tips-07-moving-during-ramadan-practical-scheduling-tips.html
+Redirect 301 /blog/why-choose-full-service-movers-vs-diy-moving-abu-dhabi.html /blog/full-service-movers-vs-diy-moving-uae.html
+Redirect 301 /blog/how-to-prepare-move-week-by-week-checklist-abu-dhabi.html /blog/ultimate-moving-checklist-8-weeks-stress-free.html
+Redirect 301 /blog/best-areas-to-live-abu-dhabi-complete-guide.html /blog.html
+Redirect 301 /blog/moving-safety-tips-abu-dhabi-essential-guide.html /blog/moving-tips-08-staying-safe-on-moving-day-in-uae-summer-heat.html
+
+# Enable Rewrite Engine for clean URLs (optional - works with static HTML)
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# LIVE (site at domain root): RewriteBase /
+# LOCAL (XAMPP subfolder): RewriteBase /manwithvan.ae/
+RewriteBase /
+
+# Old blog-post.php?slug= redirects to correct blog posts
+RewriteCond %{QUERY_STRING} slug=full-service-movers-vs-diy-moving-uae
+RewriteRule ^blog-post\.php$ /blog/full-service-movers-vs-diy-moving-uae.html? [R=301,L]
+
+RewriteCond %{QUERY_STRING} slug=summer-moving-tips-uae-extreme-heat
+RewriteRule ^blog-post\.php$ /blog/moving-tips-08-staying-safe-on-moving-day-in-uae-summer-heat.html? [R=301,L]
+
+RewriteCond %{QUERY_STRING} slug=move-heavy-furniture-wood-floor-expert-tips
+RewriteRule ^blog-post\.php$ /blog/furniture-care-05-disassembling-flat-pack-beds-for-safer-moves.html? [R=301,L]
+
+RewriteCond %{QUERY_STRING} slug=house-moving-services-dubai-what-to-expect
+RewriteRule ^blog-post\.php$ /blog/dubai-moving-01-abu-dhabi-to-dubai-what-changes-in-your-move-plan.html? [R=301,L]
+
+RewriteCond %{QUERY_STRING} slug=prepare-move-week-by-week-checklist
+RewriteRule ^blog-post\.php$ /blog/ultimate-moving-checklist-8-weeks-stress-free.html? [R=301,L]
+
+# Fallback: any remaining blog-post.php goes to blog index
+RewriteRule ^blog-post\.php$ /blog.html [R=301,L]
+
+# Old service sub-pages
+RewriteRule ^services/office-al-abyad/?$ /services.html [R=301,L]
+RewriteRule ^services/office-abu-al-abyad/?$ /services.html [R=301,L]
+RewriteRule ^services/office-bani-yas/?$ /services.html [R=301,L]
+
+# Never redirect blog.html - serve it directly (prevents redirect to /blog/)
+RewriteRule ^blog\.html$ - [L]
+
+# Redirect old logo path to new location
+RewriteRule ^logo\.png$ images/logo/logo.png [L]
+
+# Don't rewrite real files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Sitemap: /sitemap.xml -> sitemap.xml (static file)
+# (sitemap.xml exists as static file - no rewrite needed)
+
+# Clean URLs for static HTML pages (remove .html extension in URLs)
+RewriteRule ^about/?$ about.html [L]
+RewriteRule ^services/?$ services.html [L]
+RewriteRule ^contact/?$ contact.html [L]
+RewriteRule ^quote/?$ get-free-quote.html [L]
+# Blog: /blog and /blog/ serve the redesigned blog.html (root); individual posts stay in blog/
+RewriteRule ^blog/?$ blog.html [L]
+RewriteRule ^blog/([a-zA-Z0-9\-]+)/?$ blog/$1.html [L]
+
+# Redirect old root location URLs to locations/ directory
+RewriteRule ^movers-khalifa-city-abu-dhabi\.html$ locations/movers-khalifa-city-abu-dhabi.html [R=301,L]
+RewriteRule ^movers-mohammed-bin-zayed-city-abu-dhabi\.html$ locations/movers-mohammed-bin-zayed-city-abu-dhabi.html [R=301,L]
+RewriteRule ^movers-mussafah-abu-dhabi\.html$ locations/movers-mussafah-abu-dhabi.html [R=301,L]
+RewriteRule ^movers-al-reem-island-abu-dhabi\.html$ locations/movers-al-reem-island-abu-dhabi.html [R=301,L]
+RewriteRule ^movers-saadiyat-island-abu-dhabi\.html$ locations/movers-saadiyat-island-abu-dhabi.html [R=301,L]
+RewriteRule ^movers-yas-island-abu-dhabi\.html$ locations/movers-yas-island-abu-dhabi.html [R=301,L]
+RewriteRule ^movers-al-raha-beach-abu-dhabi\.html$ locations/movers-al-raha-beach-abu-dhabi.html [R=301,L]
+RewriteRule ^movers-al-shahama-abu-dhabi\.html$ locations/movers-al-shahama-abu-dhabi.html [R=301,L]
+RewriteRule ^movers-baniyas-abu-dhabi\.html$ locations/movers-baniyas-abu-dhabi.html [R=301,L]
+RewriteRule ^movers-al-reef-abu-dhabi\.html$ locations/movers-al-reef-abu-dhabi.html [R=301,L]
+RewriteRule ^movers-al-khalidiyah-abu-dhabi\.html$ locations/movers-al-khalidiyah-abu-dhabi.html [R=301,L]
+RewriteRule ^movers-al-zahiyah-abu-dhabi\.html$ locations/movers-al-zahiyah-abu-dhabi.html [R=301,L]
+
+# Location pages - movers in Abu Dhabi areas (clean URLs)
+RewriteRule ^movers-khalifa-city-abu-dhabi/?$ locations/movers-khalifa-city-abu-dhabi.html [L]
+RewriteRule ^movers-mohammed-bin-zayed-city-abu-dhabi/?$ locations/movers-mohammed-bin-zayed-city-abu-dhabi.html [L]
+RewriteRule ^movers-mussafah-abu-dhabi/?$ locations/movers-mussafah-abu-dhabi.html [L]
+RewriteRule ^movers-al-reem-island-abu-dhabi/?$ locations/movers-al-reem-island-abu-dhabi.html [L]
+RewriteRule ^movers-saadiyat-island-abu-dhabi/?$ locations/movers-saadiyat-island-abu-dhabi.html [L]
+RewriteRule ^movers-yas-island-abu-dhabi/?$ locations/movers-yas-island-abu-dhabi.html [L]
+RewriteRule ^movers-al-raha-beach-abu-dhabi/?$ locations/movers-al-raha-beach-abu-dhabi.html [L]
+RewriteRule ^movers-al-shahama-abu-dhabi/?$ locations/movers-al-shahama-abu-dhabi.html [L]
+RewriteRule ^movers-baniyas-abu-dhabi/?$ locations/movers-baniyas-abu-dhabi.html [L]
+RewriteRule ^movers-al-reef-abu-dhabi/?$ locations/movers-al-reef-abu-dhabi.html [L]
+RewriteRule ^movers-al-khalidiyah-abu-dhabi/?$ locations/movers-al-khalidiyah-abu-dhabi.html [L]
+RewriteRule ^movers-al-zahiyah-abu-dhabi/?$ locations/movers-al-zahiyah-abu-dhabi.html [L]
+</IfModule>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+
+# SEO/performance/security headers added 2026-06-28
+# Custom 404 keeps users on the site when an old URL is requested.
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  <FilesMatch "\.(js|mjs)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(webp|jpg|jpeg|png|gif|svg|ico|css|woff|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+</IfModule>

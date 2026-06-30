@@ -1,0 +1,319 @@
+﻿/* Services Page - Complete Redesign (index header/footer/WA shared) */
+
+/* Override Pico main padding - remove huge gap between header and content */
+body.page-with-fixed-header main {
+  padding: 0 !important;
+}
+
+/* Hero - full-width gradient, centered */
+.svc-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  padding: 5rem 0 6rem;
+  color: white;
+  text-align: center;
+}
+.svc-hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.svc-hero p {
+  font-size: 1.125rem;
+  color: #94a3b8;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+.svc-hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.svc-hero-btns a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.svc-hero-btns .svc-btn-primary {
+  background: #007ab9;
+  color: white;
+}
+.svc-hero-btns .svc-btn-primary:hover { background: #005a8f; }
+.svc-hero-btns .svc-btn-outline {
+  border: 2px solid rgba(255,255,255,0.5);
+  color: white;
+}
+.svc-hero-btns .svc-btn-outline:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+/* Trust bar */
+.svc-trust-bar {
+  background: #0f172a;
+  color: white;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+.svc-trust-inner {
+  display: flex;
+  gap: 3rem;
+  animation: svcTrustMarquee 35s linear infinite;
+}
+.svc-trust-inner span {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+}
+.svc-trust-inner .svc-check { color: #22c55e; }
+@keyframes svcTrustMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Service cards - bento grid */
+.svc-service-grid {
+  padding: 5rem 0;
+  background: #f8fafc;
+}
+.svc-service-grid .svc-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+.svc-service-grid .svc-subheading {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+.svc-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 992px) { .svc-cards { grid-template-columns: 1fr; } }
+.svc-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+.svc-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+}
+.svc-card-icon.blue { background: rgba(0,122,185,0.12); color: #007ab9; }
+.svc-card-icon.dark { background: rgba(15,23,42,0.1); color: #0f172a; }
+.svc-card-icon.green { background: rgba(34,197,94,0.12); color: #16a34a; }
+.svc-card h3 { font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; }
+.svc-card p { font-size: 0.9375rem; color: #64748b; line-height: 1.6; margin-bottom: 1.25rem; }
+.svc-card a {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #007ab9;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.svc-card a:hover { color: #005a8f; }
+
+/* Core services - stacked blocks with accent */
+/* Pico styles `article` as cards; in dark mode that becomes a near-black panel. Force light, readable blocks. */
+.svc-core {
+  padding: 5rem 0;
+  background: #f8fafc;
+  color-scheme: light;
+}
+.svc-core .svc-heading { text-align: center; font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 3rem; }
+.svc-core-block {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+  color: #0f172a;
+}
+.svc-core-block:last-child { margin-bottom: 0; }
+.svc-core-block h2 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #007ab9;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+.svc-core-block p {
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.svc-core-block a {
+  font-weight: 600;
+  color: #007ab9;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.svc-core-block a:hover { color: #005a8f; }
+
+/* E-E-A-T badges */
+.svc-eeat {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+.svc-eeat .svc-heading { text-align: center; font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 2rem; }
+.svc-eeat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 768px) { .svc-eeat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .svc-eeat-grid { grid-template-columns: 1fr; } }
+.svc-eeat-item {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  transition: transform 0.2s;
+}
+.svc-eeat-item:hover { transform: translateY(-2px); }
+.svc-eeat-item svg.icon,
+.svc-eeat-item .icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 1rem;
+  color: #007ab9;
+}
+.svc-eeat-item h3 { font-size: 1rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+.svc-eeat-item p { font-size: 0.8125rem; color: #64748b; line-height: 1.5; margin: 0; }
+
+/* FAQ - card style */
+.svc-faq {
+  padding: 5rem 0;
+  background: white;
+}
+.svc-faq .svc-heading { text-align: center; font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 2rem; }
+.svc-faq-list {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.svc-faq-item {
+  border-bottom: 1px solid #e2e8f0;
+}
+.svc-faq-item:first-child { border-top: 1px solid #e2e8f0; }
+.svc-faq-q {
+  width: 100%;
+  padding: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.2s;
+}
+.svc-faq-q:hover { color: #007ab9; }
+.svc-faq-q span {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+  position: relative;
+}
+.svc-faq-q span::before, .svc-faq-q span::after {
+  content: '';
+  position: absolute;
+  background: #007ab9;
+}
+.svc-faq-q span::before { width: 10px; height: 2px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.svc-faq-q span::after { width: 2px; height: 10px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.svc-faq-q[aria-expanded="true"] span::after { transform: translate(-50%, -50%) rotate(90deg); }
+.svc-faq-a { display: none; }
+.svc-faq-a[hidden] { display: none !important; }
+.svc-faq-a:not([hidden]) { display: block; }
+.svc-faq-a p {
+  padding: 0 0 1.25rem 0;
+  margin: 0;
+  font-size: 0.9375rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* How it works - horizontal steps */
+.svc-steps {
+  padding: 5rem 0;
+  background: #f8fafc;
+}
+.svc-steps .svc-heading { text-align: center; font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 3rem; }
+.svc-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 768px) { .svc-steps-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .svc-steps-grid { grid-template-columns: 1fr; } }
+.svc-step {
+  text-align: center;
+}
+.svc-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #007ab9;
+  color: white;
+  font-weight: 800;
+  font-size: 1.125rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.svc-step h4 { font-size: 1rem; font-weight: 700; color: #0f172a; margin-bottom: 0.25rem; }
+.svc-step p { font-size: 0.8125rem; color: #64748b; margin: 0; }
+
+/* Areas marquee */
+.svc-areas {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+.svc-areas .svc-heading { text-align: center; font-size: 1.5rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem; }
+.svc-areas .svc-subheading { text-align: center; font-size: 0.9375rem; color: #64748b; margin-bottom: 1.5rem; }
+.svc-areas-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+}
+.svc-areas-links a {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #007ab9;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.svc-areas-links a:hover { color: #005a8f; text-decoration: underline; }

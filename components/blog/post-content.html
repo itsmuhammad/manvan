@@ -1,0 +1,42 @@
+﻿<!-- Blog Post Content -->
+<article class="blog-post-content">
+  <div class="container">
+    <div class="blog-post-article">
+      <p id="post-excerpt" class="blog-post-excerpt"></p>
+      <div id="post-content" class="blog-post-text">
+        <!-- Content will be loaded here -->
+      </div>
+
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gray-200);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="width: 48px; height: 48px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </div>
+            <div>
+              <p style="font-weight: 600; color: var(--gray-900);">Admin</p>
+              <p style="font-size: 0.875rem; color: var(--gray-500);">Man With Van Team</p>
+            </div>
+          </div>
+          <button id="share-btn" class="btn btn-outline">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 0.5rem;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+            </svg>
+            Share
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Posts -->
+    <div id="related-posts" style="margin-top: 4rem;">
+      <h2 style="font-size: 1.875rem; font-weight: 700; margin-bottom: 2rem; color: var(--gray-900);">Related Articles</h2>
+      <div class="grid grid-3" id="related-posts-grid">
+        <!-- Related posts will be loaded here -->
+      </div>
+    </div>
+  </div>
+</article>
+

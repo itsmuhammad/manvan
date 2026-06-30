@@ -1,0 +1,93 @@
+﻿User-agent: *
+Allow: /
+
+# Allow all search engine bots to crawl the site
+# Specific allowances for important directories
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /blog/
+Allow: /services/
+
+# Disallow sensitive areas
+Disallow: /admin/
+Disallow: /config/
+Disallow: /database/
+Disallow: /functions/
+Disallow: /email/
+Disallow: /components/
+Disallow: /blog-template.html
+Disallow: /blog/blog-template.html
+Disallow: /blog/_template.html
+Disallow: /blog/_generated_cards_snippet.html
+Disallow: /.htaccess
+Disallow: /README.md
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/uploads/
+Disallow: /template_to_use/
+
+# Disallow query parameters that could create duplicate content
+Disallow: /*?
+Disallow: /*&
+Disallow: /search
+Disallow: /*utm_*
+
+# Allow specific query parameters that are important
+Allow: /*?page=*
+Allow: /*?category=*
+
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extenservice
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Sitemap location
+Sitemap: https://manwithvan.ae/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Block aggressive crawlers that might overload the server
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Disallow: /

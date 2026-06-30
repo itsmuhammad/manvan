@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls C:/xampp/htdocs/manwithvan.ae/blog/*.html)",
+      "Bash(grep -h '<title>\\\\|<meta name=\"description\"' C:/xampp/htdocs/manwithvan.ae/locations/*.html)",
+      "Bash(grep -i 'FAQPage\\\\|faq' /c/xampp/htdocs/manwithvan.ae/*.html)",
+      "Bash(dir \"C:\\\\xampp\\\\htdocs\\\\manwithvan.ae\\\\blog\" /b /s)",
+      "Bash(grep -rL \"onload=\\\\\"this.onload=null;this.rel='stylesheet'\\\\\"\" \"C:/xampp/htdocs/manwithvan.ae/\" --include=\"*.html\" --max-depth 1)",
+      "Bash(grep \"\\\\.html$\")",
+      "WebSearch",
+      "WebFetch(domain:ahrefs.com)",
+      "WebFetch(domain:www.semrush.com)",
+      "WebFetch(domain:tamammovers.com)",
+      "WebFetch(domain:emoversuae.com)",
+      "WebFetch(domain:www.wemovers.ae)",
+      "WebFetch(domain:easytruck.ae)",
+      "WebFetch(domain:www.affordablemoversuae.com)",
+      "Bash(curl -s \"http://localhost/manwithvan.ae/locations/movers-khalifa-city-abu-dhabi.html\")",
+      "Bash(grep:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}

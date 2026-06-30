@@ -1,0 +1,232 @@
+﻿<!-- Professional Wide Quote Form -->
+<section class="section" style="padding: 4rem 0; background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);">
+  <div class="container" style="max-width: 1600px;">
+    
+    <!-- Header -->
+    <div style="text-align: center; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem; color: var(--gray-900); letter-spacing: -0.02em;">
+        Get Your Free Moving Quote
+      </h2>
+      <p style="color: var(--gray-600); font-size: 1.25rem; line-height: 1.6;">
+        Fill out the form below and we'll get back to you within 24 hours with a detailed quote
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 400px; gap: 3rem; max-width: 1400px; margin: 0 auto;">
+      
+      <!-- Main Form Section - Much Wider -->
+      <div class="card" style="padding: 4rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1); border-radius: 1.5rem; background: white;">
+        
+        <!-- // lead capture handled by wa-lead-capture.js -->
+        <form id="quote-form" style="width: 100%;">
+          <input type="hidden" name="_subject" value="New Quote Request - Man With Van">
+          <input type="hidden" name="_next" value="https://manwithvan.ae/quote-thank-you.html">
+          
+          <!-- Row 1: Name & Phone -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+            <div class="form-group">
+              <label class="form-label" for="name" style="font-weight: 600; margin-bottom: 0.75rem; display: block;">Full Name *</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required style="padding: 1rem; font-size: 1rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; transition: all 0.3s;">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone" style="font-weight: 600; margin-bottom: 0.75rem; display: block;">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+971 50 826 8481" required style="padding: 1rem; font-size: 1rem; border: 2px solid #e5e7eb; border-radius: 0.75rem;">
+            </div>
+          </div>
+
+          <!-- Row 2: Email & Service Type -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+            <div class="form-group">
+              <label class="form-label" for="email" style="font-weight: 600; margin-bottom: 0.75rem; display: block;">Email Address</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" style="padding: 1rem; font-size: 1rem; border: 2px solid #e5e7eb; border-radius: 0.75rem;">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="service_type" style="font-weight: 600; margin-bottom: 0.75rem; display: block;">Service Type *</label>
+              <select id="service_type" name="service_type" class="form-select" required style="padding: 1rem; font-size: 1rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; background: white;">
+                <option value="">Select service type</option>
+                <option value="villa_moving">Villa Moving</option>
+                <option value="apartment_moving">Apartment Moving</option>
+                <option value="office_moving">Office Relocation</option>
+                <option value="furniture_moving">Furniture Moving</option>
+                <option value="packing_services">Packing Services</option>
+                <option value="storage_solutions">Storage Solutions</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Row 3: Moving From, Moving To, Date -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+            <div class="form-group">
+              <label class="form-label" for="moving_from_emirate" style="font-weight: 600; margin-bottom: 0.75rem; display: block;">Moving From (Emirate)</label>
+              <select id="moving_from_emirate" name="moving_from_emirate" class="form-select" style="padding: 1rem; font-size: 1rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; background: white;">
+                <option value="">Select emirate</option>
+                <option value="Abu Dhabi">Abu Dhabi</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Sharjah">Sharjah</option>
+                <option value="Ajman">Ajman</option>
+                <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+                <option value="Umm Al Quwain">Umm Al Quwain</option>
+                <option value="Fujairah">Fujairah</option>
+                <option value="Other">Other</option>
+              </select>
+              <input type="text" id="moving_from" name="moving_from" class="form-input" placeholder="Area e.g. Reem Island, Khalifa City" style="padding: 0.75rem; font-size: 0.95rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; margin-top: 0.5rem;" list="uae-areas-from">
+              <datalist id="uae-areas-from">
+                <option value="Reem Island"><option value="Khalifa City"><option value="Mussafah"><option value="Yas Island"><option value="Saadiyat Island"><option value="Al Maryah Island"><option value="Al Reem Island"><option value="Marina"><option value="Downtown Dubai"><option value="JBR"><option value="JLT"><option value="Business Bay"><option value="Al Nahda"><option value="Al Khan">
+              </datalist>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="moving_to_emirate" style="font-weight: 600; margin-bottom: 0.75rem; display: block;">Moving To (Emirate)</label>
+              <select id="moving_to_emirate" name="moving_to_emirate" class="form-select" style="padding: 1rem; font-size: 1rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; background: white;">
+                <option value="">Select emirate</option>
+                <option value="Abu Dhabi">Abu Dhabi</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Sharjah">Sharjah</option>
+                <option value="Ajman">Ajman</option>
+                <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+                <option value="Umm Al Quwain">Umm Al Quwain</option>
+                <option value="Fujairah">Fujairah</option>
+                <option value="Other">Other</option>
+              </select>
+              <input type="text" id="moving_to" name="moving_to" class="form-input" placeholder="Area e.g. Reem Island, Khalifa City" style="padding: 0.75rem; font-size: 0.95rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; margin-top: 0.5rem;" list="uae-areas-to">
+              <datalist id="uae-areas-to">
+                <option value="Reem Island"><option value="Khalifa City"><option value="Mussafah"><option value="Yas Island"><option value="Saadiyat Island"><option value="Al Maryah Island"><option value="Al Reem Island"><option value="Marina"><option value="Downtown Dubai"><option value="JBR"><option value="JLT"><option value="Business Bay"><option value="Al Nahda"><option value="Al Khan">
+              </datalist>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="moving_date" style="font-weight: 600; margin-bottom: 0.75rem; display: block;">Moving Date</label>
+              <input type="date" id="moving_date" name="moving_date" required autocomplete="off" class="form-input" style="color: #111111; background: #ffffff; padding: 1rem; font-size: 1rem; border: 2px solid #e5e7eb; border-radius: 0.75rem;">
+            </div>
+          </div>
+
+          <!-- Row 4: Property Size -->
+          <div style="margin-bottom: 2rem;">
+            <div class="form-group">
+              <label class="form-label" for="property_size" style="font-weight: 600; margin-bottom: 0.75rem; display: block;">Property Size</label>
+              <select id="property_size" name="property_size" class="form-select" style="padding: 1rem; font-size: 1rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; background: white;">
+                <option value="">Select property size</option>
+                <option value="studio">Studio</option>
+                <option value="1_bedroom">1 Bedroom</option>
+                <option value="2_bedroom">2 Bedrooms</option>
+                <option value="3_bedroom">3 Bedrooms</option>
+                <option value="4_bedroom">4 Bedrooms</option>
+                <option value="5+_bedroom">5+ Bedrooms</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Row 5: Message -->
+          <div style="margin-bottom: 3rem;">
+            <label class="form-label" for="message" style="font-weight: 600; margin-bottom: 0.75rem; display: block;">Additional Details</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Tell us more about your moving needs, special requirements, or any questions you have..." rows="5" style="padding: 1rem; font-size: 1rem; border: 2px solid #e5e7eb; border-radius: 0.75rem; font-family: inherit; resize: vertical;"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary btn-lg" id="quoteSubmitBtn" style="padding: 1.5rem 5rem; font-size: 1.25rem; min-width: 350px; font-weight: 700; box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4); transition: all 0.3s;">
+              Submit Quote Request
+            </button>
+            <div id="quoteFormMessage" style="margin-top: 1.5rem; display: none;"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sidebar: Contact Info -->
+      <div style="display: flex; flex-direction: column; gap: 2rem;">
+        
+        <!-- Contact Info Card -->
+        <div class="card" style="padding: 2.5rem; background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark)); color: white; border-radius: 1.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: white;">Get in Touch</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.2); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg fill="none" stroke="white" viewBox="0 0 24 24" style="width: 24px; height: 24px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <p style="font-size: 0.875rem; color: rgba(255,255,255,0.8); margin-bottom: 0.25rem;">Phone</p>
+                <a href="tel:+971508268481" style="color: white; font-weight: 600; font-size: 1.125rem;">+971 50 826 8481</a>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.2); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg fill="none" stroke="white" viewBox="0 0 24 24" style="width: 24px; height: 24px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <p style="font-size: 0.875rem; color: rgba(255,255,255,0.8); margin-bottom: 0.25rem;">Email</p>
+                <a href="mailto:info@manwithvan.ae" style="color: white; font-weight: 600; font-size: 1.125rem;">info@manwithvan.ae</a>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.2); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg fill="none" stroke="white" viewBox="0 0 24 24" style="width: 24px; height: 24px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p style="font-size: 0.875rem; color: rgba(255,255,255,0.8); margin-bottom: 0.25rem;">Location</p>
+                <p style="color: white; font-weight: 600; font-size: 1.125rem;">Abu Dhabi, UAE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Response Time Card -->
+        <div class="card" style="padding: 2.5rem; background: white; border-radius: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+          <div style="text-align: center;">
+            <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+              <svg fill="none" stroke="white" viewBox="0 0 24 24" style="width: 32px; height: 32px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--gray-900);">Quick Response</h3>
+            <p style="color: var(--gray-600); line-height: 1.6;">
+              We typically respond to all quote requests within 24 hours during business days.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="quote-success-message" class="success-card" style="display: none; max-width: 800px; margin: 3rem auto;">
+      <div class="success-icon">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <h2>Thank You!</h2>
+      <p>Your quote request has been received. Our team will contact you within 24 hours with a detailed quote.</p>
+      <a href="index.html" class="btn btn-primary">Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<script>
+// Add focus effects to form inputs
+document.addEventListener('DOMContentLoaservice', function() {
+  const inputs = document.querySelectorAll('#quote-form input, #quote-form select, #quote-form textarea');
+  inputs.forEach(input => {
+    input.addEventListener('focus', function() {
+      this.style.borderColor = '#3b82f6';
+      this.style.boxShadow = '0 0 0 3px rgba(59, 130, 246, 0.1)';
+    });
+    input.addEventListener('blur', function() {
+      this.style.borderColor = '#e5e7eb';
+      this.style.boxShadow = 'none';
+    });
+  });
+});
+</script>
+
