@@ -1,6 +1,26 @@
-.git/
+# Ignore git directory
 .git
+.git/
+.git/**/*
+.github
+
+# Ignore node modules
 node_modules/
+node_modules
+
+# Ignore wrangler cache
 .wrangler/
+.wrangler
+
+# Ignore build artifacts
 dist/
 build/
+
+# Ignore config files
+.env
+.env.local
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
