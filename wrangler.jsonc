@@ -1,19 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/wrangler.json",
   "name": "manvan",
-  "main": "src/index.js",
   "compatibility_date": "2026-06-30",
+  "assets": {
+    "directory": "."
+  },
   "observability": {
     "enabled": true
-  },
-  "build": {
-    "command": "echo 'No build needed'",
-    "cwd": "."
-  },
-  "site": {
-    "bucket": "."
-  },
-"compatibility_flags": [
-    "nodejs_compat"
-  ]
+  }
 }
